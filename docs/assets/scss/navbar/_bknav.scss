@@ -1,0 +1,141 @@
+@import "../variables/variables";
+
+.hm-nav {
+    background-color: $bgNavColor;
+}
+.hm-link {
+    color: $white;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+.hm-brand {
+    color: $white;
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    font-weight: $fontWeight;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    float: left;
+}
+
+.hm-navbar
+{
+    position: fixed;
+    opacity: 0.95;
+    display: flex;
+
+    padding: 1rem 1rem; 
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    width: 100%;
+}
+
+  
+  .topnav-right {
+    margin-left: auto !important;
+  }
+
+  .hm-item {
+    font-size: 1rem;
+    font-weight: $fontWeight;
+    line-height: 1.5;
+  }
+
+  .hm-link:hover {
+    background: $bgColor;
+    border-radius: 10px;
+    color: $white;
+    text-decoration: none;
+  }
+
+  .hm-btn {
+    display: inline-block;
+    font-weight: $fontWeight;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $bgColor;
+    padding: 0.375rem 0.75rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+
+  .hm-btn:hover,.hm-btn1:hover {
+    background: transparent;
+    border-radius: 10px;
+    color: $white;
+    text-decoration: none;
+  }
+
+  .hm-btn:focus, .hm-btn1:focus {
+      outline: none;
+      box-shadow: none;
+  }
+
+  .hm-btnText {
+    display: inline-block;
+    font-weight: $fontWeight;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $bgColor;
+    padding: 0.400rem 1rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 1.25rem;
+  }
+
+  .hm-hero .hm-btn {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .hm-hero .hm-btn1 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .hm-hero .hm-txt {
+    position: absolute;
+    color: $white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    top: 48%;
+    left: 54%;
+  }
+
+  @media (max-width: 1200px) {
+    .hm-hero .hm-btn1 {
+      position: absolute;
+      top: 70%;
+      left: 40%;
+    }
+  }
+
+    @media (max-width: 1200px) {
+      .hm-hero .hm-txt {
+        position: absolute;
+        top: 57%;
+        left: 38%;
+      }
+  }

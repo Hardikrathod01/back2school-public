@@ -1,0 +1,43 @@
+<div mat-dialog-content align="center">
+    <h2 mat-dialog-title>Welcome back!</h2>
+
+    <form [formGroup]="loginForm" fxLayout="column">
+
+        <div>
+            <mat-form-field>
+
+                <input matInput placeholder="Username" formControlName="username" required>
+                <mat-error *ngIf="loginForm.get('username').hasError('required')">
+                    Please enter a valid username
+                </mat-error>
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+
+                <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
+                    required>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                    Please enter a valid password
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+    </form>
+</div>
+
+<div mat-dialog-actions align="center">
+
+    <button mat-button type="submit" (click)="onNoClick()" class="mat-raised-button">
+        Close
+    </button>
+
+    <button mat-button type="submit" (click)="save()" class="mat-raised-button"
+        [disabled]="!(loginForm.controls.username.valid && loginForm.controls.password.valid)">
+        Login
+    </button>
+
+
+</div>

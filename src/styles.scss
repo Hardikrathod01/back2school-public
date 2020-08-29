@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./assets/scss/bk2sc.scss";
+
+.hm-hero {
+    background: url(assets/img/brand/banner08.jpg) no-repeat center top scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: auto;
+    height: 80vh;
+    position: relative;
+}
+
+.registration-hero {
+    background: url(assets/img/brand/banner08.jpg) no-repeat center top scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: auto;
+    height: 100vh;
+    position: relative;
+}
+

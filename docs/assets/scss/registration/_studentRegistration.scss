@@ -1,0 +1,18 @@
+@import "../variables/variables";
+
+.mat-card {
+    max-width: 30vw !important;
+    max-height: 70vh !important;
+}
+
+.mat-card-title {
+    color: $bgColor;
+    text-align: center;
+}
+
+.stBtn {
+    align-items: center;
+}
+.card-position {
+    padding-top: 50px;
+}

@@ -1,0 +1,49 @@
+<header class="hm-hero">
+  <div id="registerButtons">
+    <button type="button" [routerLink]="'/teacherRegistration'" class="hm-btn hm-btnText">Are you a teacher?</button>
+    <p class="hm-txt">OR</p>
+    <button type="button" [routerLink]="'/studentRegistration'" class="hm-btn1 hm-btnText">Are you a student?</button>
+  </div>
+</header>
+
+<nav class="hm-navbar navbar-expand-lg navbar-light">
+  <a class="hm-brand" href="#">
+    <img style="max-width: 60px;" src="../../../assets/img/brand/back2school.png" rel="icon">
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav topnav-right">
+      <li class="hm-item">
+        <a class="hm-link" href="#">Home</a>
+      </li>
+
+      <li class="hm-item">
+        <a class="hm-link" href="#">Our Programs</a>
+      </li>
+      <li class="hm-item">
+        <a class="hm-link" href="#">Teachers</a>
+      </li>
+      <li class="hm-item">
+        <a class="hm-link" href="#">Awards</a>
+      </li>
+      <li class="hm-item">
+        <a class="hm-link" href="#">News</a>
+      </li>
+      <li class="hm-item">
+        <a class="hm-link" href="#">Contact Us</a>
+      </li>
+      <li class="hm-item">
+        <button type="button" class="hm-btn waves-effect" (click)="openLogin()">Login</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- <p id="bottom"></p> -->
+
+<div>Content here</div>
+<section clas="hm-content">Content here <br> </section>

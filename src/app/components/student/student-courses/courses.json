@@ -1,0 +1,98 @@
+[
+    {
+        "subject": "Maths",
+        "chapterIndex": 1,
+        "chapterName": "Algebra",
+        "AssignmentIndex": 2,
+        "AssignmentName": "Examples of Algebra",
+        "imageURL": "/courses/course1.png"
+    },
+    {
+        "subject": "Physics",
+        "chapterIndex": 2,
+        "chapterName": "Gravity",
+        "AssignmentIndex": 1,
+        "AssignmentName": "Gravity Numeracals",
+        "imageURL": "/courses/course3.png"
+    },
+    {
+        "subject": "History",
+        "chapterIndex": 5,
+        "chapterName": "War of Panipat",
+        "AssignmentIndex": 5,
+        "AssignmentName": "Report",
+        "imageURL": "/courses/course4.png"
+    },
+    {
+        "subject": "Geography",
+        "chapterIndex": 3,
+        "chapterName": "Minerals in Earth",
+        "AssignmentIndex": 4,
+        "AssignmentName": "Map of India",
+        "imageURL": "/courses/course3.png"
+    },
+    {
+        "subject": "Maths",
+        "chapterIndex": 1,
+        "chapterName": "Algebra",
+        "AssignmentIndex": 2,
+        "AssignmentName": "Examples of Algebra",
+        "imageURL": "/courses/course1.png"
+    },
+    {
+        "subject": "Physics",
+        "chapterIndex": 2,
+        "chapterName": "Gravity",
+        "AssignmentIndex": 1,
+        "AssignmentName": "Gravity Numeracals",
+        "imageURL": "/courses/course3.png"
+    },
+    {
+        "subject": "History",
+        "chapterIndex": 5,
+        "chapterName": "War of Panipat",
+        "AssignmentIndex": 5,
+        "AssignmentName": "Report",
+        "imageURL": "/courses/course4.png"
+    },
+    {
+        "subject": "Geography",
+        "chapterIndex": 3,
+        "chapterName": "Minerals in Earth",
+        "AssignmentIndex": 4,
+        "AssignmentName": "Map of India",
+        "imageURL": "/courses/course3.png"
+    },
+    {
+        "subject": "Maths",
+        "chapterIndex": 1,
+        "chapterName": "Algebra",
+        "AssignmentIndex": 2,
+        "AssignmentName": "Examples of Algebra",
+        "imageURL": "/courses/course1.png"
+    },
+    {
+        "subject": "Physics",
+        "chapterIndex": 2,
+        "chapterName": "Gravity",
+        "AssignmentIndex": 1,
+        "AssignmentName": "Gravity Numeracals",
+        "imageURL": "/courses/course3.png"
+    },
+    {
+        "subject": "History",
+        "chapterIndex": 5,
+        "chapterName": "War of Panipat",
+        "AssignmentIndex": 5,
+        "AssignmentName": "Report",
+        "imageURL": "/courses/course4.png"
+    },
+    {
+        "subject": "Geography",
+        "chapterIndex": 3,
+        "chapterName": "Minerals in Earth",
+        "AssignmentIndex": 4,
+        "AssignmentName": "Map of India",
+        "imageURL": "/courses/course3.png"
+    }
+]

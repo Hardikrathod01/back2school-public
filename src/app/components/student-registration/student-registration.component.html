@@ -1,0 +1,53 @@
+<div class="container-fluid registration-hero card-position">
+    <div class="row">
+        <div class="col-7 col-sm-7"></div>
+        <div class="col-5 col-sm-5">
+            <mat-card>
+                <mat-card-title>Student Registration</mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="studentRegistration" (ngSubmit)="submit()">
+                        <p>
+                            <mat-form-field>
+                                <input type="text" matInput placeholder="Student Name" formControlName="studentName"
+                                    required>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field>
+                                <input type="number" matInput placeholder="Enrollment Number"
+                                    formControlName="enrollmentNumber" required>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field>
+                                <input type="number" matInput placeholder="Standard" formControlName="standard"
+                                    required>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field>
+                                <input type="password" matInput placeholder="Password" formControlName="password"
+                                    required>
+                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+                                </mat-icon>
+                            </mat-form-field>
+                        </p>
+
+                        <p *ngIf="error" class="error">
+                            {{ error }}
+                        </p>
+
+                        <div mat-dialog-actions class="button" align="center">
+                            <button type="submit" mat-button class="mat-raised-button"
+                                [disabled]="!(studentRegistration.controls.studentName.valid && studentRegistration.controls.password.valid 
+                                && studentRegistration.controls.standard.valid && studentRegistration.controls.enrollmentNumber.valid)">Register</button>
+                        </div>
+
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

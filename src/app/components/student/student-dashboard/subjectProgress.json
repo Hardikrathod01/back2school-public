@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Maths",
+        "percentage": "45",
+        "icon":"calculate",
+        "color": "pink"
+    },
+    {
+        "title": "Physics",
+        "percentage": "70",
+        "icon":"science",
+        "color": "indigo"
+    },
+    {
+        "title": "History",
+        "percentage": "60",
+        "icon":"history_edu",
+        "color": "violet"
+    },
+    {
+        "title": "Geography",
+        "percentage": "80",
+        "icon":"terrain",
+        "color": "olive"
+    },
+    {
+        "title": "Maths",
+        "percentage": "45",
+        "icon":"calculate",
+        "color": "aqua"
+    },
+    {
+        "title": "Physics",
+        "percentage": "70",
+        "icon":"science",
+        "color": "lightblue"
+    },
+    {
+        "title": "History",
+        "percentage": "60",
+        "icon":"history_edu",
+        "color": "grey"
+    },
+    {
+        "title": "Geography",
+        "percentage": "80",
+        "icon":"terrain",
+        "color": "teal"
+    }
+   
+]

@@ -1,0 +1,30 @@
+@import "../variables/variables";
+
+.mat-form-field {
+    width: 100% !important;
+}
+
+.mat-button {
+    width: 40% !important;
+    color: $bgColor;
+}
+
+.mat-focused .mat-form-field-label {
+    color: $bgColor !important;
+}
+
+.mat-form-field-underline {
+    background-color: $bgColor !important;
+}
+
+.mat-form-field-ripple {
+    background-color: $bgColor !important;
+}
+
+.mat-dialog-title {
+    color: $bgColor !important;
+}
+
+.mat-icon {
+    color: $bgColor;
+}

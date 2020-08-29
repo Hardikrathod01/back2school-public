@@ -1,0 +1,58 @@
+<mat-toolbar color="primary" class="example-toolbar">
+    <h1 class="app-name">Back2School</h1>
+    <button mat-icon-button (click)="isExpanded = !isExpanded" class="studentMenu">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container class="example-container" autosize>
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+        (mouseleave)="mouseleave()">
+        <mat-nav-list>
+            <a mat-list-item [routerLink]="'/studentLogin/studentDashboard'" [routerLinkActive]="['active']">
+                <mat-icon aria-hidden="true" aria-label="dashboard" class="material-icons-two-tone">dashboard
+                </mat-icon>
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Dashboard</span>
+
+            </a>
+            <mat-list-item (click)="showSubmenu = !showSubmenu;toggleCourseMenu();" class="parent">
+                <mat-icon aria-hidden="true" aria-label="school" class="material-icons-two-tone">school</mat-icon>
+                <span class="full-width studentMenuItem" *ngIf="isExpanded || isShowing">Courses</span>
+                <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">
+                    expand_more</mat-icon>
+            </mat-list-item>
+            <div id="hideCourseMenu" class="submenu expanded">
+                <a mat-list-item [routerLink]="'/studentLogin/studentCourses'" [routerLinkActive]="['active']"
+                    *ngIf="isExpanded || isShowing">All
+                    Courses</a>
+                <a mat-list-item [routerLink]="'/studentLogin/aboutCourse'" [routerLinkActive]="['active']"
+                    *ngIf="isExpanded || isShowing">Course
+                    Detail</a>
+            </div>
+            <a mat-list-item [routerLink]="'/studentLogin/studentCalendar'" [routerLinkActive]="['active']">
+                <mat-icon aria-hidden="true" aria-label="event" class="material-icons-two-tone">event</mat-icon>
+
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Calendar</span>
+            </a>
+            <a mat-list-item [routerLink]="'/studentLogin/studentAssignment'" [routerLinkActive]="['active']">
+                <mat-icon aria-hidden="true" aria-label="assignment" class="material-icons-two-tone">assignment
+                </mat-icon>
+
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Assignments</span>
+            </a>
+            <a mat-list-item [routerLink]="'/studentLogin/studentLibrary'" [routerLinkActive]="['active']">
+                <mat-icon aria-hidden="true" aria-label="local_library" class="material-icons-two-tone">
+                    local_library
+                </mat-icon>
+
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Library</span>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>

@@ -35,9 +35,6 @@ var routes = [
         path: 'teacherRegistration',
         component: teacher_registration_component_1.TeacherRegistrationComponent,
         pathMatch: 'full'
-    }, {
-        path: '**',
-        component: navbar_component_1.NavbarComponent
     }
 ];
 var AppRoutingModule = /** @class */ (function () {

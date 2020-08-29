@@ -27,6 +27,9 @@ const routes: Routes = [
     path: 'teacherRegistration',
     component: TeacherRegistrationComponent,
     pathMatch: 'full'
+  }, {
+    path: '**',
+    component: NavbarComponent,
   }
 ];
 

@@ -1,1 +1,183 @@
-<p>about-course works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <mat-toolbar>
+            <span class="dashboardTitle">{{'Dashboard'}}</span>
+            <span class="verticalLine">|</span>
+            <mat-icon aria-hidden="true" aria-label="home" class="material-icons-filled">school
+            </mat-icon>
+            <span class="breadLine">/</span>
+            <a [routerLink]="'/studentLogin/studentDashboard'" [routerLinkActive]="['active']"><span
+                    class="dashboardTitle">Home</span></a>
+            <span class="breadLine">/</span>
+            <span class="dashboardTitle">Course Detail</span>
+        </mat-toolbar>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="row">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>About Course</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{courseDetail.aboutCourse}}</p>
+
+                        <div class="row">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                                <h6>Duration:</h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <p> {{courseDetail.duration}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                                <h6>Teacher Name:</h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <p> {{courseDetail.teacher}}</p>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="row">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Course Outcome</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p><strong>After the completion of the course, students will be able to:</strong></p>
+                        <div *ngFor="let goal of courseDetail.courseOutcome">
+                            <p>{{goal}}</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title>{{courseDetail.courseTitle}}</mat-card-title>
+                </mat-card-header>
+                <hr>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <mat-card-header>
+                                <mat-card-title class="course-detail-font">Notification Area</mat-card-title>
+                            </mat-card-header>
+                            <div class="course-detail-content">
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            forum_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">News Forum</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            chat_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Discussion Forum</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            people_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Project Group</span>
+
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <hr>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <mat-card-header>
+                                <mat-card-title class="course-detail-font">Documents</mat-card-title>
+                            </mat-card-header>
+                            <div class="course-detail-content">
+                                <p class="notification-d-link">Here you will find Extra Material to refer.</p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            folder_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Concept Maps</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            menu_book_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Books</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            bookmarks_outline
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Websites Links</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            rule_folder
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Examples</span>
+
+                                    </a>
+                                </p>
+                                <p class="notification-p-link">
+                                    <a [routerLink]="'#'">
+                                        <mat-icon>
+                                            play_circle_filled
+                                        </mat-icon>
+                                        <span class="aligned-with-icon">Videos</span>
+
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+
+                <hr>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <mat-card-header>
+                                <mat-card-title class="course-detail-font">All Assignments</mat-card-title>
+                            </mat-card-header>
+                            <div class="course-detail-content">
+                                <p class="notification-p-link" *ngFor="let assignment of courseDetail.assignments">
+                                    <mat-icon>
+                                        assignment_outline
+                                    </mat-icon>
+                                    <span class="aligned-with-icon">{{assignment}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+</div>

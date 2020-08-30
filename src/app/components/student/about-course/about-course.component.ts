@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as courseDetail from './courseDetail.json';
 
 @Component({
   selector: 'app-about-course',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AboutCourseComponent implements OnInit {
 
   constructor() { }
+  courseDetail: any;
 
   ngOnInit(): void {
+    this.courseDetail = courseDetail.default[0];
+
     var courseDropDown = document.getElementById("hideCourseMenu");
     if (courseDropDown.style.display == "none") {
       courseDropDown.style.display = "block";

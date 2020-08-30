@@ -8,10 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.AboutCourseComponent = void 0;
 var core_1 = require("@angular/core");
+var courseDetail = require("./courseDetail.json");
 var AboutCourseComponent = /** @class */ (function () {
     function AboutCourseComponent() {
     }
     AboutCourseComponent.prototype.ngOnInit = function () {
+        this.courseDetail = courseDetail["default"][0];
         var courseDropDown = document.getElementById("hideCourseMenu");
         if (courseDropDown.style.display == "none") {
             courseDropDown.style.display = "block";

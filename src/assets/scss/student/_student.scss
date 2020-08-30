@@ -136,3 +136,17 @@ table tr:last-child td {
     margin-top: -10px !important;
 }
 
+.calendar-bottom {
+    flex-grow: 1;
+    padding: 3em;
+    margin-bottom: 10px;
+}
+
+.fc .fc-daygrid-day-top {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+// .mat-dialog-actions {
+//     margin-bottom: 15px !important;
+// }

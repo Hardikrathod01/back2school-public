@@ -22,9 +22,25 @@ import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { StudentCoursesComponent } from './student-courses/student-courses.component';
 import { AboutCourseComponent } from './about-course/about-course.component';
+import { StudentCalendarComponent } from './student-calendar/student-calendar.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  timeGridPlugin,
+  listPlugin,
+  interactionPlugin
+])
 
 @NgModule({
-  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent],
+  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent, StudentCalendarComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,
@@ -43,7 +59,14 @@ import { AboutCourseComponent } from './about-course/about-course.component';
     MatTableModule,
     ChartsModule,
     RouterModule,
-    NgCircleProgressModule.forRoot()
+    NgCircleProgressModule.forRoot(),
+    FullCalendarModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
+    NgxMatNativeDateModule,
+    MatDatepickerModule,
+    MatSelectModule,
+
   ],
   exports: [
     MatDialogModule,

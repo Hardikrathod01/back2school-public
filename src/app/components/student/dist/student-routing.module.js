@@ -14,6 +14,7 @@ var student_component_1 = require("./student.component");
 var student_dashboard_component_1 = require("./student-dashboard/student-dashboard.component");
 var student_courses_component_1 = require("./student-courses/student-courses.component");
 var about_course_component_1 = require("./about-course/about-course.component");
+var student_calendar_component_1 = require("./student-calendar/student-calendar.component");
 var routes = [
     {
         path: 'studentLogin',
@@ -30,6 +31,9 @@ var routes = [
             {
                 path: 'aboutCourse',
                 component: about_course_component_1.AboutCourseComponent
+            }, {
+                path: 'studentCalendar',
+                component: student_calendar_component_1.StudentCalendarComponent
             }
         ]
     }

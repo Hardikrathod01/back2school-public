@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalsComponent } from '../modals/modals.component';
-import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Router } from '@angular/router';
 
 @Component({

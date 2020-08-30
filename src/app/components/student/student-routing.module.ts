@@ -6,6 +6,7 @@ import { StudentComponent } from './student.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { StudentCoursesComponent } from './student-courses/student-courses.component';
 import { AboutCourseComponent } from './about-course/about-course.component';
+import { StudentCalendarComponent } from './student-calendar/student-calendar.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,9 @@ const routes: Routes = [
             {
                 path: 'aboutCourse',
                 component: AboutCourseComponent
+            },{
+                path: 'studentCalendar',
+                component: StudentCalendarComponent
             }
 
         ]

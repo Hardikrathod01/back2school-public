@@ -9,7 +9,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-// import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 import { TeacherRegistrationComponent } from './teacher-registration/teacher-registration.component';

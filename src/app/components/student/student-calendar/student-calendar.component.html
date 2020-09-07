@@ -1,4 +1,17 @@
 <div class="container-fluid">
+    <div class="row">
+        <mat-toolbar>
+            <span class="dashboardTitle">{{'Dashboard'}}</span>
+            <span class="verticalLine">|</span>
+            <mat-icon aria-hidden="true" aria-label="home" class="material-icons-filled">event
+            </mat-icon>
+            <span class="breadLine">/</span>
+            <a [routerLink]="'/studentLogin/studentDashboard'" [routerLinkActive]="['active']"><span
+                    class="dashboardTitle">Home</span></a>
+            <span class="breadLine">/</span>
+            <span class="dashboardTitle">Student Clendar</span>
+        </mat-toolbar>
+    </div>
     <div class="row calendar-bottom">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <mat-card class="example-card">
@@ -6,7 +19,7 @@
                     <mat-card-title>My Calendar</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <full-calendar [options]="calendarOptions"></full-calendar>
+                    <full-calendar #fullcalendar id="calendar" [options]="calendarOptions"></full-calendar>
                 </mat-card-content>
             </mat-card>
 
@@ -40,7 +53,7 @@
                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                                     <mat-form-field>
                                         <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose start time"
-                                            [formControl]="startDate" [min]="minDate" [max]="maxDate"
+                                        formControlName="startDate" [min]="minDate" [max]="maxDate"
                                             [disabled]="disabled">
                                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                         <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners"
@@ -53,7 +66,7 @@
                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                                     <mat-form-field>
                                         <input matInput [ngxMatDatetimePicker]="picker1" placeholder="Choose end time"
-                                            [formControl]="endDate" [min]="minDate" [max]="maxDate"
+                                        formControlName="endDate" [min]="minDate" [max]="maxDate"
                                             [disabled]="disabled">
                                         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                                         <ngx-mat-datetime-picker #picker1 [showSpinners]="showSpinners"

@@ -7,6 +7,8 @@ import { StudentDashboardComponent } from './student-dashboard/student-dashboard
 import { StudentCoursesComponent } from './student-courses/student-courses.component';
 import { AboutCourseComponent } from './about-course/about-course.component';
 import { StudentCalendarComponent } from './student-calendar/student-calendar.component';
+import { StudentAssignmentsComponent } from './student-assignments/student-assignments.component';
+import { StudentExamComponent } from './student-exam/student-exam.component';
 
 const routes: Routes = [
     {
@@ -28,6 +30,12 @@ const routes: Routes = [
             },{
                 path: 'studentCalendar',
                 component: StudentCalendarComponent
+            },{
+                path: 'studentAssignments',
+                component: StudentAssignmentsComponent
+            },{
+                path: 'studentExams',
+                component: StudentExamComponent
             }
 
         ]

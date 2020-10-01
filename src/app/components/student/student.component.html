@@ -33,18 +33,18 @@
 
                 <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Calendar</span>
             </a>
-            <a mat-list-item [routerLink]="'/studentLogin/studentAssignment'" [routerLinkActive]="['active']">
+            <a mat-list-item [routerLink]="'/studentLogin/studentAssignments'" [routerLinkActive]="['active']">
                 <mat-icon aria-hidden="true" aria-label="assignment" class="material-icons-two-tone">assignment
                 </mat-icon>
 
                 <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Assignments</span>
             </a>
-            <a mat-list-item [routerLink]="'/studentLogin/studentLibrary'" [routerLinkActive]="['active']">
+            <a mat-list-item [routerLink]="'/studentLogin/studentExams'" [routerLinkActive]="['active']">
                 <mat-icon aria-hidden="true" aria-label="local_library" class="material-icons-two-tone">
-                    local_library
+                    cast_for_education
                 </mat-icon>
 
-                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Library</span>
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Exams</span>
             </a>
         </mat-nav-list>
         <mat-nav-list>

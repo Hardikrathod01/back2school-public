@@ -53,7 +53,7 @@
                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                                     <mat-form-field>
                                         <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose start time"
-                                        formControlName="startDate" [min]="minDate" [max]="maxDate"
+                                            formControlName="startDate" [min]="minDate" [max]="maxDate"
                                             [disabled]="disabled">
                                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                         <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners"
@@ -66,7 +66,7 @@
                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                                     <mat-form-field>
                                         <input matInput [ngxMatDatetimePicker]="picker1" placeholder="Choose end time"
-                                        formControlName="endDate" [min]="minDate" [max]="maxDate"
+                                            formControlName="endDate" [min]="minDate" [max]="maxDate"
                                             [disabled]="disabled">
                                         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                                         <ngx-mat-datetime-picker #picker1 [showSpinners]="showSpinners"
@@ -81,7 +81,8 @@
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <mat-form-field>
 
-                                        <textarea matInput placeholder="Event Detail" formControlName="eventDetail" required></textarea>
+                                        <textarea matInput placeholder="Event Detail" formControlName="eventDetail"
+                                            required></textarea>
                                         <mat-error *ngIf="eventForm.get('eventDetail').hasError('required')">
                                             Please enter a valid event detail
                                         </mat-error>
@@ -94,15 +95,25 @@
                 </div>
 
                 <div mat-dialog-actions align="center">
-
-                    <button mat-button type="submit" (click)="onNoClick()" class="mat-raised-button">
-                        Close
-                    </button>
-
-                    <button mat-button type="submit" (click)="save()" class="mat-raised-button"
-                        [disabled]="!(eventForm.controls.eventName.valid && eventForm.controls.eventDetail.valid)">
-                        Save
-                    </button>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-4">
+                            <button mat-button type="submit" (click)="onNoClick()" class="mat-raised-button">
+                                Close
+                            </button>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-4" *ngIf="eventClickedId === undefined || !eventClickedId">
+                            <button  mat-button type="submit" (click)="save()" class="mat-raised-button"
+                                [disabled]="!(eventForm.controls.eventName.valid && eventForm.controls.eventDetail.valid)">
+                                Save
+                            </button>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-4">
+                            <button *ngIf="eventClickedId != undefined && eventClickedId" mat-button type="submit" (click)="deleteEvent()" class="mat-raised-button"
+                                [disabled]="!(eventForm.controls.eventName.valid && eventForm.controls.eventDetail.valid)">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>

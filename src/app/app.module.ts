@@ -13,7 +13,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FullCalendarModule } from '@fullcalendar/angular';
@@ -61,7 +63,8 @@ FullCalendarModule.registerPlugins([
     NgxMatNativeDateModule,
     MatDatepickerModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
   ], exports: [MatDialogModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,7 +17,9 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule} from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { StudentCoursesComponent } from './student-courses/student-courses.component';
@@ -31,6 +33,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
+import { StudentAssignmentsComponent } from './student-assignments/student-assignments.component';
+import { StudentExamComponent } from './student-exam/student-exam.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -40,7 +44,7 @@ FullCalendarModule.registerPlugins([
 ])
 
 @NgModule({
-  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent, StudentCalendarComponent],
+  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent, StudentCalendarComponent, StudentAssignmentsComponent, StudentExamComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,
@@ -66,11 +70,11 @@ FullCalendarModule.registerPlugins([
     NgxMatNativeDateModule,
     MatDatepickerModule,
     MatSelectModule,
-
+    MatPaginatorModule,
   ],
   exports: [
     MatDialogModule,
-    MatRippleModule
+    MatRippleModule,
   ]
 })
 export class StudentModule { }

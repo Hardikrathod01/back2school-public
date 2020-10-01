@@ -5,7 +5,7 @@ import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import * as subjectCards from './subjectProgress.json';
 
-export interface PeriodicElement {
+export interface UpcomingLectures {
   date: string;
   position: number;
   subject: string;
@@ -13,7 +13,7 @@ export interface PeriodicElement {
 }
 
 let now = new Date();
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: UpcomingLectures[] = [
   { position: 1, date: new Date().toDateString(), subject: 'Maths', time: now.getHours() + ":" + now.getMinutes() },
   { position: 2, date: new Date().toDateString(), subject: 'Physics', time: now.getHours() + ":" + now.getMinutes() },
   { position: 3, date: new Date().toDateString(), subject: 'English', time: now.getHours() + ":" + now.getMinutes() },

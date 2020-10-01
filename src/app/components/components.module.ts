@@ -17,6 +17,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { StudentModule } from './student/student.module';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 @NgModule({
   declarations: [NavbarComponent, ModalsComponent, TeacherComponent, StudentRegistrationComponent, TeacherRegistrationComponent],
@@ -35,6 +37,7 @@ import { StudentModule } from './student/student.module';
     MatListModule,
     MatToolbarModule,
     StudentModule,
+    MatPaginatorModule,
   ],
   exports: [
     NavbarComponent,

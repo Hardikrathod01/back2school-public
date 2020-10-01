@@ -7,6 +7,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import * as moment from 'moment';
 import { ThemePalette } from '@angular/material/core';
 import { MatTooltip } from '@angular/material/tooltip';
+declare var $: any;
 
 @Component({
   selector: 'app-student-calendar',
@@ -31,6 +32,8 @@ export class StudentCalendarComponent implements OnInit {
   public minDate: moment.Moment;
   public maxDate: moment.Moment;
   public color: ThemePalette = 'primary';
+  public eventClickedId;
+  public calendarApi;
 
   hide = true;
   public eventForm = new FormGroup({
@@ -60,8 +63,6 @@ export class StudentCalendarComponent implements OnInit {
     this.dialogRef = this.dialog.open(this.myTemplate, dialogConfig);
   }
 
-
-
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
   }
@@ -72,19 +73,25 @@ export class StudentCalendarComponent implements OnInit {
 
   onNoClick() {
     this.dialogRef.close();
+    this.eventForm.reset();
+    this.eventClickedId = "";
   }
 
   handleEventClick(clickInfo: EventClickArg) {
     const dialogConfig = new MatDialogConfig();
-
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.minHeight = '300px';
     dialogConfig.minWidth = '400px';
-    this.eventForm.controls['eventName'].setValue(clickInfo.event.title);
-    this.eventForm.controls['startDate'].setValue(clickInfo.event.start);
-    this.eventForm.controls['endDate'].setValue(clickInfo.event.end);
-    this.eventForm.controls['eventDetail'].setValue(clickInfo.event.extendedProps.description);
+
+    if (clickInfo.event.title != undefined || clickInfo.event.title != "") {
+      this.eventForm.controls['eventName'].setValue(clickInfo.event.title);
+      this.eventForm.controls['startDate'].setValue(clickInfo.event.start);
+      this.eventForm.controls['endDate'].setValue(clickInfo.event.end);
+      this.eventForm.controls['eventDetail'].setValue(clickInfo.event.extendedProps.description);
+      this.eventClickedId = clickInfo.event.id;
+    }
+
     this.dialogRef = this.dialog.open(this.myTemplate, dialogConfig);
 
   }
@@ -94,8 +101,6 @@ export class StudentCalendarComponent implements OnInit {
     this.eventDetail = this.eventForm.get('eventDetail').value;
     const calendarApi = this.selectInfo.view.calendar;
 
-    calendarApi.unselect(); // clear date selection
-
     calendarApi.addEvent({
       id: createEventId(),
       title: this.eventName,
@@ -103,8 +108,19 @@ export class StudentCalendarComponent implements OnInit {
       end: this.eventForm.get('endDate').value,
       description: this.eventDetail
     });
-
+    this.eventClickedId = "";
     this.dialogRef.close();
+    this.eventForm.reset();
+  }
+
+  deleteEvent() {
+    const calendarApi = this.selectInfo.view.calendar;
+    const event = calendarApi.getEventById(this.eventClickedId);
+    this.eventClickedId = "";
+    event.remove();
+    this.dialogRef.close();
+    this.eventForm.reset();
+
   }
 
   ngOnInit(): void {
@@ -131,7 +147,7 @@ export class StudentCalendarComponent implements OnInit {
 
       /* you can update a remote database when these fire:
       eventAdd:
-      eventChange:
+      eventChange: 
       eventRemove:
       */
     }

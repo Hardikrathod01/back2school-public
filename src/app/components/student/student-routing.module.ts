@@ -9,6 +9,7 @@ import { AboutCourseComponent } from './about-course/about-course.component';
 import { StudentCalendarComponent } from './student-calendar/student-calendar.component';
 import { StudentAssignmentsComponent } from './student-assignments/student-assignments.component';
 import { StudentExamComponent } from './student-exam/student-exam.component';
+import { StudentResultComponent } from './student-result/student-result.component';
 
 const routes: Routes = [
     {
@@ -36,6 +37,9 @@ const routes: Routes = [
             },{
                 path: 'studentExams',
                 component: StudentExamComponent
+            },{
+                path: 'studentResult',
+                component: StudentResultComponent
             }
 
         ]

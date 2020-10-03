@@ -4,6 +4,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 export interface PendingAssignments {
   no: number;
@@ -20,20 +22,20 @@ export interface CompletedAssignments {
   marks: any;
 }
 
-let now = new Date();
+let dateNow = new Date().toDateString()
 const PendingAssignments : PendingAssignments [] = [
-  {no: 1, subject: 'Maths',topicName: 'Integration by parts',lastDate: new Date().toDateString()},
-  {no: 2, subject: 'Physics',topicName: 'Gravity',lastDate: new Date().toDateString()},
-  {no: 3, subject: 'History',topicName: 'War of Panipat',lastDate: new Date().toDateString()},
-  {no: 4, subject: 'Geography',topicName: 'Map of India',lastDate: new Date().toDateString()},
-  {no: 5, subject: 'Maths',topicName: 'Integration by parts',lastDate: new Date().toDateString()},
-  {no: 6, subject: 'Physics',topicName: 'Gravity',lastDate: new Date().toDateString()},
-  {no: 7, subject: 'History',topicName: 'War of Panipat',lastDate: new Date().toDateString()},
-  {no: 8, subject: 'Geography',topicName: 'Map of India',lastDate: new Date().toDateString()},
-  {no: 9, subject: 'Maths',topicName: 'Integration by parts',lastDate: new Date().toDateString()},
-  {no: 10, subject: 'Physics',topicName: 'Gravity',lastDate: new Date().toDateString()},
-  {no: 11, subject: 'History',topicName: 'War of Panipat',lastDate: new Date().toDateString()},
-  {no: 12, subject: 'Geography',topicName: 'Map of India',lastDate: new Date().toDateString()},
+  {no: 1, subject: 'Maths',topicName: 'Integration by parts',lastDate: dateNow},
+  {no: 2, subject: 'Physics',topicName: 'Gravity',lastDate: dateNow},
+  {no: 3, subject: 'History',topicName: 'War of Panipat',lastDate: dateNow},
+  {no: 4, subject: 'Geography',topicName: 'Map of India',lastDate: dateNow},
+  {no: 5, subject: 'Maths',topicName: 'Integration by parts',lastDate: dateNow},
+  {no: 6, subject: 'Physics',topicName: 'Gravity',lastDate: dateNow},
+  {no: 7, subject: 'History',topicName: 'War of Panipat',lastDate: dateNow},
+  {no: 8, subject: 'Geography',topicName: 'Map of India',lastDate: dateNow},
+  {no: 9, subject: 'Maths',topicName: 'Integration by parts',lastDate: dateNow},
+  {no: 10, subject: 'Physics',topicName: 'Gravity',lastDate: dateNow},
+  {no: 11, subject: 'History',topicName: 'War of Panipat',lastDate: dateNow},
+  {no: 12, subject: 'Geography',topicName: 'Map of India',lastDate: dateNow},
 ]
 
 const CompletedAssignments : CompletedAssignments [] = [

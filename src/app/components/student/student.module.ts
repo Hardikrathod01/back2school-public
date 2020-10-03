@@ -35,6 +35,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
 import { StudentAssignmentsComponent } from './student-assignments/student-assignments.component';
 import { StudentExamComponent } from './student-exam/student-exam.component';
+import { StudentResultComponent } from './student-result/student-result.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -44,7 +46,7 @@ FullCalendarModule.registerPlugins([
 ])
 
 @NgModule({
-  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent, StudentCalendarComponent, StudentAssignmentsComponent, StudentExamComponent],
+  declarations: [StudentComponent, StudentDashboardComponent, StudentCoursesComponent, AboutCourseComponent, StudentCalendarComponent, StudentAssignmentsComponent, StudentExamComponent, StudentResultComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,
@@ -71,10 +73,12 @@ FullCalendarModule.registerPlugins([
     MatDatepickerModule,
     MatSelectModule,
     MatPaginatorModule,
+    MatMenuModule,
   ],
   exports: [
     MatDialogModule,
     MatRippleModule,
+    MatMenuModule,
   ]
 })
 export class StudentModule { }

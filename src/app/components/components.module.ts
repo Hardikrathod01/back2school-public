@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { StudentModule } from './student/student.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [NavbarComponent, ModalsComponent, TeacherComponent, StudentRegistrationComponent, TeacherRegistrationComponent],
@@ -38,12 +39,14 @@ import {MatTableDataSource} from '@angular/material/table';
     MatToolbarModule,
     StudentModule,
     MatPaginatorModule,
+    MatMenuModule,
   ],
   exports: [
     NavbarComponent,
     ModalsComponent,
     MatDialogModule,
-    MatRippleModule
+    MatRippleModule,
+    MatMenuModule,
   ]
 })
 

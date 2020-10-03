@@ -26,6 +26,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
 
 FullCalendarModule.registerPlugins([
@@ -65,7 +66,8 @@ FullCalendarModule.registerPlugins([
     MatInputModule,
     MatSelectModule,
     MatPaginatorModule,
-  ], exports: [MatDialogModule, FormsModule],
+    MatMenuModule,
+  ], exports: [MatDialogModule, FormsModule,MatMenuModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,68 @@
     <button mat-icon-button (click)="isExpanded = !isExpanded" class="studentMenu">
         <mat-icon>menu</mat-icon>
     </button>
+    <span class="toolbar-spacer"></span>
+    <input type="search" placeholder="Search">
+    <mat-icon class="material-icons-two-tone icon-button notification-spacer" [matMenuTriggerFor]="menu">
+        notifications_active</mat-icon>
+    <mat-icon class="material-icons-two-tone icon-button notification-spacer" [matMenuTriggerFor]="profile">
+        account_circle</mat-icon>
+    <mat-menu #profile="matMenu">
+        <div mat-menu-item class="notification-text">
+            <mat-icon class="material-icons-rounded">perm_identity</mat-icon>
+            <span>My Profile</span>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <mat-icon class="material-icons-outlined">settings</mat-icon>
+            <span>Settings</span>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <mat-icon class="material-icons-rounded">feedback</mat-icon>
+            <span>Feedback</span>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <mat-icon class="material-icons-rounded">help_outline</mat-icon>
+            <span>Help</span>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <mat-icon class="material-icons-rounded">power_settings_new</mat-icon>
+            <a [routerLink]="'../'"><span>Logout</span></a>
+        </div>
+    </mat-menu>
+    <mat-menu #menu="matMenu">
+        <div mat-menu-item class="notification-text">
+            <div>
+                <mat-icon class="material-icons-rounded notification-icon">all_inclusive</mat-icon>
+            </div>
+            <div>
+                <span>Teacher has updated the lecture details.</span>
+            </div>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <div>
+                <mat-icon class="material-icons-rounded notification-icon">change_history</mat-icon>
+            </div>
+            <div>
+                <span>Result for Maths weekly test has been announced.</span>
+            </div>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <div>
+                <mat-icon class="material-icons-rounded notification-icon">multiline_chart</mat-icon>
+            </div>
+            <div>
+                <span>Added new assignment for Maths.</span>
+            </div>
+        </div>
+        <div mat-menu-item class="notification-text">
+            <div>
+                <mat-icon class="material-icons-rounded notification-icon">done</mat-icon>
+            </div>
+            <div>
+                <span>History assignment is passed!</span>
+            </div>
+        </div>
+    </mat-menu>
 </mat-toolbar>
 <mat-sidenav-container class="example-container" autosize>
     <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
@@ -45,6 +107,13 @@
                 </mat-icon>
 
                 <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Exams</span>
+            </a>
+            <a mat-list-item [routerLink]="'/studentLogin/studentResult'" [routerLinkActive]="['active']">
+                <mat-icon aria-hidden="true" aria-label="local_library" class="material-icons-two-tone">
+                    grading
+                </mat-icon>
+
+                <span class="studentMenuItem" *ngIf="isExpanded || isShowing">Result</span>
             </a>
         </mat-nav-list>
         <mat-nav-list>

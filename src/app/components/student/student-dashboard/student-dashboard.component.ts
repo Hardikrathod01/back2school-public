@@ -14,11 +14,11 @@ export interface UpcomingLectures {
 
 let now = new Date();
 const ELEMENT_DATA: UpcomingLectures[] = [
-  { position: 1, date: new Date().toDateString(), subject: 'Maths', time: now.getHours() + ":" + now.getMinutes() },
-  { position: 2, date: new Date().toDateString(), subject: 'Physics', time: now.getHours() + ":" + now.getMinutes() },
-  { position: 3, date: new Date().toDateString(), subject: 'English', time: now.getHours() + ":" + now.getMinutes() },
-  { position: 4, date: new Date().toDateString(), subject: 'History', time: now.getHours() + ":" + now.getMinutes() },
-  { position: 5, date: new Date().toDateString(), subject: 'Art', time: now.getHours() + ":" + now.getMinutes() },
+  { position: 1, date: new Date().toDateString(), subject: 'Maths', time: now},
+  { position: 2, date: new Date().toDateString(), subject: 'Physics', time: now},
+  { position: 3, date: new Date().toDateString(), subject: 'English', time: now},
+  { position: 4, date: new Date().toDateString(), subject: 'History', time: now},
+  { position: 5, date: new Date().toDateString(), subject: 'Art', time: now},
 ];
 
 @Component({

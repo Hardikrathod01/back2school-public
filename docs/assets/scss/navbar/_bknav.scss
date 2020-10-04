@@ -1,141 +1,264 @@
 @import "../variables/variables";
 
 .hm-nav {
-    background-color: $bgNavColor;
+  background-color: $bgNavColor;
 }
 .hm-link {
-    color: $white;
-    display: block;
-    padding: 0.5rem 1rem;
+  color: $white;
+  display: block;
+  padding: 0.5rem 1rem;
 }
 .hm-brand {
-    color: $white;
-    display: inline-block;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    font-weight: $fontWeight;
-    line-height: inherit;
-    white-space: nowrap;
+  color: $white;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: $fontWeight;
+  line-height: inherit;
+  white-space: nowrap;
 }
 
 .navbar-brand {
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
-    float: left;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  float: left;
 }
 
-.hm-navbar
-{
-    position: fixed;
-    opacity: 0.95;
-    display: flex;
+.hm-navbar {
+  position: fixed;
+  opacity: 0.95;
+  display: flex;
 
-    padding: 1rem 1rem; 
+  padding: 1rem 1rem;
 
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    top: 0;
-    width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-  
-  .topnav-right {
-    margin-left: auto !important;
-  }
+.topnav-right {
+  margin-left: auto !important;
+}
 
-  .hm-item {
-    font-size: 1rem;
-    font-weight: $fontWeight;
-    line-height: 1.5;
-  }
+.hm-item {
+  font-size: 1rem;
+  font-weight: $fontWeight;
+  line-height: 1.5;
+}
 
-  .hm-link:hover {
-    background: $bgColor;
-    border-radius: 10px;
-    color: $white;
-    text-decoration: none;
-  }
+.hm-link:hover {
+  background: $bgColor;
+  border-radius: 10px;
+  color: $white;
+  text-decoration: none;
+}
 
-  .hm-btn {
-    display: inline-block;
-    font-weight: $fontWeight;
-    color: $white;
-    text-align: center;
-    vertical-align: middle;
-    background-color: $bgColor;
-    padding: 0.375rem 0.75rem;
-    border-radius: 10px;
-    border: 1px solid transparent;
-  }
+.hm-btn {
+  display: inline-block;
+  font-weight: $fontWeight;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $bgColor;
+  padding: 0.375rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
 
-  .hm-btn:hover,.hm-btn1:hover {
-    background: transparent;
-    border-radius: 10px;
-    color: $white;
-    text-decoration: none;
-  }
+.hm-btn:hover,
+.hm-btn1:hover {
+  background: transparent;
+  border-radius: 10px;
+  color: $white;
+  text-decoration: none;
+}
 
-  .hm-btn:focus, .hm-btn1:focus {
-      outline: none;
-      box-shadow: none;
-  }
+.hm-btn:focus,
+.hm-btn1:focus {
+  outline: none;
+  box-shadow: none;
+}
 
-  .hm-btnText {
-    display: inline-block;
-    font-weight: $fontWeight;
-    color: $white;
-    text-align: center;
-    vertical-align: middle;
-    background-color: $bgColor;
-    padding: 0.400rem 1rem;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    font-size: 1.25rem;
-  }
+.hm-btnText {
+  display: inline-block;
+  font-weight: $fontWeight;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $bgColor;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+}
 
-  .hm-hero .hm-btn {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
+.hm-hero .hm-btn {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
+.hm-hero .hm-btn1 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.hm-hero .hm-txt {
+  position: absolute;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  top: 48%;
+  left: 54%;
+}
+
+@media (max-width: 1200px) {
   .hm-hero .hm-btn1 {
     position: absolute;
-    top: 50%;
-    right: 15%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 70%;
+    left: 40%;
   }
+}
 
+@media (max-width: 1200px) {
   .hm-hero .hm-txt {
     position: absolute;
-    color: $white;
-    font-weight: 700;
-    font-size: 1.25rem;
-    top: 48%;
-    left: 54%;
+    top: 57%;
+    left: 38%;
   }
+}
 
-  @media (max-width: 1200px) {
-    .hm-hero .hm-btn1 {
-      position: absolute;
-      top: 70%;
-      left: 40%;
-    }
-  }
+.home-background {
+  background-color: white;
+  margin-top: 0px !important;
+}
 
-    @media (max-width: 1200px) {
-      .hm-hero .hm-txt {
-        position: absolute;
-        top: 57%;
-        left: 38%;
-      }
-  }
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 60vw;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+.separator::before {
+  margin-right: 0.25em;
+}
+.separator::after {
+  margin-left: 0.25em;
+}
+
+.mat-img-size {
+  height: 200px !important;
+}
+
+.home-card-bg1 {
+  background-color: #ff911b;
+  color: white;
+}
+
+.home-card-bg2 {
+  background-color: #a671bc;
+  color: white;
+}
+
+.home-card-bg3 {
+  background-color: #5bc4db;
+  color: white;
+}
+
+.home-card-bg4 {
+  background-color: #ffc000;
+  color: white;
+}
+
+.home-card-text-header {
+  color: white !important;
+}
+
+.home-card-content {
+  margin: 0 16px;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  height: 220px;
+  width: 200px;
+}
+.caption {
+  display: block;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+.teacher-spacing {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.mat-award-size {
+  height: 150px;
+  width: 200px;
+}
+
+.photo > img {
+  object-fit: cover;
+  width: 90%;
+  max-height: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.award > img {
+  object-fit: cover;
+  width: 40%;
+  max-height: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.contact > img {
+  object-fit: cover;
+  width: 10%;
+  max-height: 20%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.padding-brand {
+  padding: 0px !important;
+}
+
+.location {
+  font-size: 30px;
+  margin-right: 15px;
+}

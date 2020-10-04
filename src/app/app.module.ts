@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -67,6 +68,7 @@ FullCalendarModule.registerPlugins([
     MatSelectModule,
     MatPaginatorModule,
     MatMenuModule,
+    NgbModule,
   ], exports: [MatDialogModule, FormsModule,MatMenuModule],
   providers: [],
   bootstrap: [AppComponent]

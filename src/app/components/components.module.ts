@@ -20,6 +20,7 @@ import { StudentModule } from './student/student.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [NavbarComponent, ModalsComponent, TeacherComponent, StudentRegistrationComponent, TeacherRegistrationComponent],
@@ -40,6 +41,7 @@ import { MatMenuModule } from '@angular/material/menu';
     StudentModule,
     MatPaginatorModule,
     MatMenuModule,
+    NgbModule,
   ],
   exports: [
     NavbarComponent,

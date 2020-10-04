@@ -2,13 +2,15 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalsComponent } from '../modals/modals.component';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+
   constructor(private dialog: MatDialog, private router: Router) { }
   navbarOpen = false;
   username: string;

@@ -1,5 +1,5 @@
 .row {
-    margin: 5px 0 0 0 !important;
+    // margin: 5px 0 0 0;
     // width: 85vw !important;
 }
 
@@ -82,9 +82,9 @@ table tr:last-child td {
     padding-top: 10px;
 }
 
-.mat-card-image {
-    max-height: 150px !important;
-}
+// .mat-card-image {
+//     max-height: 150px;
+// }
 
 .mat-course-content {
     padding-left: 15px;
@@ -92,6 +92,7 @@ table tr:last-child td {
 
 .center-button {
     justify-content: center;
+    margin-top: 40px;
 }
 
 .course-card-shadow {
@@ -153,4 +154,128 @@ table tr:last-child td {
 
 .fc .fc-daygrid-body {
     width: 100% !important;
+}
+
+.icon-button {
+    cursor: pointer;
+}
+
+.status-box[data-status="Submited"] {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 3px;
+    color: blue;
+}
+
+.status-box[data-status="Passed"] {
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 3px;
+    color: green;
+}
+
+.status-box[data-status="Failed"] {
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 3px;
+    color: red;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+mat-icon.notification-icon {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.mat-menu-item {
+    cursor: pointer;
+    word-wrap: break-word !important;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    // white-space: nowrap;
+    overflow: visible !important;
+    text-overflow: ellipsis;
+    display: block;
+    /** set line height to desired height */
+    line-height: 18px !important;
+    /** set height to auto */
+    height: auto !important;
+    padding: 0 16px;
+    text-align: left;
+    text-decoration: none;
+    max-width: 100%;
+    position: relative;
+    white-space: normal !important;
+}
+
+.notification-text {
+    display: flex !important;
+    padding: 12px 15px !important;
+    border-bottom: 1px solid grey !important;
+}
+
+.notification-spacer {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 80%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	height: 40%;
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
 }

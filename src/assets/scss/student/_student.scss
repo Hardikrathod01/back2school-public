@@ -1,5 +1,5 @@
 .row {
-    margin: 5px 0 0 0 !important;
+    // margin: 5px 0 0 0;
     // width: 85vw !important;
 }
 
@@ -82,9 +82,9 @@ table tr:last-child td {
     padding-top: 10px;
 }
 
-.mat-card-image {
-    max-height: 150px !important;
-}
+// .mat-card-image {
+//     max-height: 150px;
+// }
 
 .mat-course-content {
     padding-left: 15px;
@@ -92,6 +92,7 @@ table tr:last-child td {
 
 .center-button {
     justify-content: center;
+    margin-top: 40px;
 }
 
 .course-card-shadow {

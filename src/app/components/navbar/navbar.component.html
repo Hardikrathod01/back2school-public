@@ -1,14 +1,14 @@
 <header class="hm-hero">
   <div id="registerButtons">
-    <button type="button" [routerLink]="'/teacherRegistration'" class="hm-btn hm-btnText">Are you a teacher?</button>
+    <button type="button" class="hm-btn hm-btnText">Are you a teacher?</button>
     <p class="hm-txt">OR</p>
-    <button type="button" [routerLink]="'/studentRegistration'" class="hm-btn1 hm-btnText">Are you a student?</button>
+    <button type="button" class="hm-btn1 hm-btnText">Are you a student?</button>
   </div>
 </header>
 
 <nav class="hm-navbar navbar-expand-lg navbar-light">
   <a class="hm-brand" href="#">
-    <img style="max-width: 60px;" src="../../../assets/img/brand/back2school.png" rel="icon">
+    <img style="max-width: 60px; border-radius: 5px;" src="../../../assets/img/brand/back2school.png" rel="icon">
   </a>
 
   <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
@@ -20,21 +20,20 @@
       <li class="hm-item">
         <a class="hm-link" href="#">Home</a>
       </li>
-
       <li class="hm-item">
-        <a class="hm-link" href="#">Our Programs</a>
+        <a class="hm-link" href="#awards">Awards</a>
       </li>
       <li class="hm-item">
-        <a class="hm-link" href="#">Teachers</a>
+        <a class="hm-link" href="#programs">Our Programs</a>
       </li>
       <li class="hm-item">
-        <a class="hm-link" href="#">Awards</a>
+        <a class="hm-link" href="#teachers">Teachers</a>
       </li>
       <li class="hm-item">
-        <a class="hm-link" href="#">News</a>
+        <a class="hm-link" href="#news">News</a>
       </li>
       <li class="hm-item">
-        <a class="hm-link" href="#">Contact Us</a>
+        <a class="hm-link" href="#contact">Contact Us</a>
       </li>
       <li class="hm-item">
         <button type="button" class="hm-btn waves-effect" (click)="openLogin()">Login</button>
@@ -42,10 +41,9 @@
     </ul>
   </div>
 </nav>
-<!-- <p id="bottom"></p> -->
 
 <div class="container-fluid home-background">
-  <div class="separator">
+  <div class="separator" id="awards">
     <h5>Awards</h5>
   </div>
   <div class="row">
@@ -72,7 +70,7 @@
     </div>
     <div class="col-0 col-sm-1 col-md-1 col-lg-1"></div>
   </div>
-  <div class="separator">
+  <div class="separator" id="programs">
     <h5>Our Programs</h5>
   </div>
   <div class="row">
@@ -81,7 +79,7 @@
       <mat-card class="example-card home-card-bg1">
         <img mat-card-image class="mat-img-size" src="../../../assets/img/offerings/kid.jpg" alt="Photo of a Shiba Inu">
         <mat-card-header>
-          <mat-card-title class="home-card-text-header">KinderGarten</mat-card-title>
+          <mat-card-title class="home-card-text-header hm-item">KinderGarten</mat-card-title>
         </mat-card-header>
         <mat-card-content class="home-card-content">
           <div class="row">
@@ -102,7 +100,7 @@
           src="../../../assets/img/offerings/5 Reasons Camping on the 10th Step will Save Your Holidays - The Joyous Family.jpg"
           alt="Photo of a Shiba Inu">
         <mat-card-header>
-          <mat-card-title class="home-card-text-header">Primary School</mat-card-title>
+          <mat-card-title class="home-card-text-header hm-item">Primary School</mat-card-title>
         </mat-card-header>
         <mat-card-content class="home-card-content">
           <div class="row">
@@ -123,7 +121,7 @@
           src="../../../assets/img/offerings/Features to look for in school that prepares your child for world.jpg"
           alt="Photo of a Shiba Inu">
         <mat-card-header>
-          <mat-card-title class="home-card-text-header">Secondary School</mat-card-title>
+          <mat-card-title class="home-card-text-header hm-item">Secondary School</mat-card-title>
         </mat-card-header>
         <mat-card-content class="home-card-content">
           <div class="row">
@@ -144,7 +142,7 @@
           src="../../../assets/img/offerings/Behind the Curtain_ Generation Z Students in College.png"
           alt="Photo of a Shiba Inu">
         <mat-card-header>
-          <mat-card-title class="home-card-text-header">Higher Secondary School</mat-card-title>
+          <mat-card-title class="home-card-text-header hm-item">Junior College</mat-card-title>
         </mat-card-header>
         <mat-card-content class="home-card-content">
           <div class="row">
@@ -160,7 +158,7 @@
       </mat-card>
     </div>
   </div>
-  <div class="separator">
+  <div class="separator" id="teachers">
     <h5>Teachers</h5>
   </div>
   <div class="row">
@@ -168,30 +166,30 @@
     </div>
     <div class="col-12 col-sm-12 col-md-3 col-lg-3 teacher-spacing">
       <figure>
-        <p><img class="rounded-img" src="../../../assets/img/brand/bbh-singapore-BUK-z0LrGBo-unsplash.jpg"
+        <p><img class="rounded-img" src="../../../assets/img/brand/teacher1.jpg"
             alt="Eiffel tower">
-        <figcaption>Katty Perry</figcaption>
+        <figcaption><h5>Doris Smith</h5></figcaption>
         </p>
       </figure>
     </div>
     <div class="col-12 col-sm-12 col-md-3 col-lg-3 teacher-spacing">
       <figure>
-        <p><img class="rounded-img" src="../../../assets/img/brand/bbh-singapore-BUK-z0LrGBo-unsplash.jpg"
+        <p><img class="rounded-img" src="../../../assets/img/brand/teacher2.jpg"
             alt="Eiffel tower">
-        <figcaption>Katty Perry</figcaption>
+        <figcaption><h5>Edna Norris</h5></figcaption>
         </p>
       </figure>
     </div>
     <div class="col-12 col-sm-12 col-md-3 col-lg-3 teacher-spacing">
       <figure>
-        <p><img class="rounded-img" src="../../../assets/img/brand/bbh-singapore-BUK-z0LrGBo-unsplash.jpg"
+        <p><img class="rounded-img" src="../../../assets/img/brand/teacher3.jpg"
             alt="Eiffel tower">
-        <figcaption>Katty Perry</figcaption>
+        <figcaption><h5>Daisy Ball</h5></figcaption>
         </p>
       </figure>
     </div>
   </div>
-  <div class="separator">
+  <div class="separator" id="news">
     <h5>News</h5>
   </div>
   <div class="row">
@@ -220,7 +218,7 @@
     </div>
     <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
   </div>
-  <div class="separator">
+  <div class="separator" id="contact">
     <h5>Contact Us</h5>
   </div>
   <div class="row">
@@ -266,7 +264,7 @@
     </div>
     <div class="col-0 col-sm-1 col-md-1 col-lg-1">
     </div>
-    <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
       <div class="row">
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 photo padding-brand">
           <img src="../../../assets/img/brand/back2school.png">
@@ -292,28 +290,28 @@
         <mat-icon class="material-icons-two-tone location">call</mat-icon>
         <span>
           <h6>
-           +91 0123456789</h6>
+            +91 0123456789</h6>
         </span>
       </div>
       <div class="row teacher-spacing ">
         <mat-icon class="material-icons-two-tone location">email</mat-icon>
         <span>
           <h6>
-           someone@example.com</h6>
+            someone@example.com</h6>
         </span>
       </div>
       <div class="row teacher-spacing ">
         <mat-icon class="material-icons-two-tone location">schedule</mat-icon>
         <span>
           <h6>
-           Monday-Friday: 9:00 AM-03:00 PM, Saturday: 09:00 AM-12:00 PM</h6>
+            Monday-Friday: 9:00 AM-03:00 PM, Saturday: 09:00 AM-12:00 PM</h6>
         </span>
       </div>
       <div class="row teacher-spacing ">
         <mat-icon class="material-icons-two-tone location">language</mat-icon>
         <span>
           <h6>
-           www.www.com</h6>
+            www.www.com</h6>
         </span>
       </div>
     </div>

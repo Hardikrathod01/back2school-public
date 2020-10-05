@@ -1,7 +1,7 @@
-.row {
-    // margin: 5px 0 0 0;
-    // width: 85vw !important;
-}
+// .row {
+//     // margin: 5px 0 0 0;
+//     // width: 85vw !important;
+// }
 
 .example-card {
     min-height: 380px !important;
@@ -9,19 +9,20 @@
 
 .mat-card {
     margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 16px;
+    margin-bottom: $stdBRad10;
+    margin-left: $stdMarginPadding15;
     padding: 0;
     max-width: unset !important;
     max-height: unset !important;
-    border-radius: 15px !important;
-    box-shadow: 0px 0px 5px 2px rgba(41, 38, 38, 0.2), 0px 1px 1px 0px rgba(43, 40, 40, 0.14),
+    border-radius: $stdMarginPadding15 !important;
+    box-shadow: 0px 0px $stdMArginPadding5 2px rgba(41, 38, 38, 0.2), 0px 1px 1px 0px rgba(43, 40, 40, 0.14),
         0px 1px 3px 0px rgba(27, 21, 21, 0.12) !important;
+    font-family: Comic Sans MS !important;
 }
 
 .dashboardTitle {
     margin-left: 8px;
-    margin-right: 5px;
+    margin-right: $stdMArginPadding5;
     font-size: 0.9em;
 }
 
@@ -29,23 +30,21 @@
     font-weight: 10;
     font-size: 1.5em;
     color: gray;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: $stdMArginPadding5;
+    margin-right: $stdMArginPadding5;
 }
 
 .breadLine {
     font-weight: 10;
     font-size: 1em;
     color: gray;
-    margin-left: 5px;
+    margin-left: $stdMArginPadding5;
 }
 
 table {
     width: 100% !important;
     border-collapse: collapse !important;
-    // border-radius: 1em;
-    margin-top: 10px;
-    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-top: $stdBRad10;
 }
 table tr:last-child td {
     border-bottom: 0 solid;
@@ -56,7 +55,7 @@ table tr:last-child td {
 }
 
 .table-caption {
-    padding-left: 10px;
+    padding-left: $stdBRad10;
 }
 
 .table-shadow {
@@ -75,11 +74,11 @@ table tr:last-child td {
 .doghnutShape {
     height: 32% !important;
     width: 32% !important;
-    margin-right: 10px;
+    margin-right: $stdBRad10;
 }
 
 .chart-wrapper {
-    padding-top: 10px;
+    padding-top: $stdBRad10;
 }
 
 // .mat-card-image {
@@ -87,7 +86,7 @@ table tr:last-child td {
 // }
 
 .mat-course-content {
-    padding-left: 15px;
+    padding-left: $stdMarginPadding15;
 }
 
 .center-button {
@@ -96,7 +95,7 @@ table tr:last-child td {
 }
 
 .course-card-shadow {
-    box-shadow: 0px 0px 5px 2px rgba(41, 38, 38, 0.2), 0px 1px 1px 0px rgba(43, 40, 40, 0.14),
+    box-shadow: 0px 0px $stdMArginPadding5 2px rgba(41, 38, 38, 0.2), 0px 1px 1px 0px rgba(43, 40, 40, 0.14),
         0px 1px 3px 0px rgba(27, 21, 21, 0.12) !important;
 }
 
@@ -113,17 +112,17 @@ table tr:last-child td {
 }
 
 .course-detail-font {
-    font-size: 16px !important;
+    font-size: $stdMarginPadding15 !important;
 }
 
 .course-detail-content {
-    margin: 0 16px;
+    margin: 0 $stdMarginPadding15;
 }
 
 .aligned-with-icon {
     position: absolute;
     margin-top: 2px;
-    margin-left: 5px; /* optional */
+    margin-left: $stdMArginPadding5; /* optional */
     font-size: 0.9375rem !important;
 }
 
@@ -139,8 +138,8 @@ table tr:last-child td {
 
 .calendar-bottom {
     flex-grow: 1;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: $stdBRad10;
+    margin-bottom: $stdBRad10;
 }
 
 .fc .fc-daygrid-day-top {
@@ -161,24 +160,24 @@ table tr:last-child td {
 }
 
 .status-box[data-status="Submited"] {
-    border: 1px solid blue;
-    padding: 5px;
+    border: 1px solid $blueColor;
+    padding: $stdMArginPadding5;
     border-radius: 3px;
-    color: blue;
+    color: $blueColor;
 }
 
 .status-box[data-status="Passed"] {
-    border: 1px solid green;
-    padding: 5px;
+    border: 1px solid $greenColor;
+    padding: $stdMArginPadding5;
     border-radius: 3px;
-    color: green;
+    color: $greenColor;
 }
 
 .status-box[data-status="Failed"] {
-    border: 1px solid red;
-    padding: 5px;
+    border: 1px solid $redColor;
+    padding: $stdMArginPadding5;
     border-radius: 3px;
-    color: red;
+    color: $redColor;
 }
 
 .toolbar-spacer {
@@ -206,15 +205,12 @@ mat-icon.notification-icon {
     outline: 0;
     border: none;
     -webkit-tap-highlight-color: transparent;
-    // white-space: nowrap;
     overflow: visible !important;
     text-overflow: ellipsis;
     display: block;
-    /** set line height to desired height */
     line-height: 18px !important;
-    /** set height to auto */
     height: auto !important;
-    padding: 0 16px;
+    padding: 0 $stdMarginPadding15;
     text-align: left;
     text-decoration: none;
     max-width: 100%;
@@ -224,58 +220,56 @@ mat-icon.notification-icon {
 
 .notification-text {
     display: flex !important;
-    padding: 12px 15px !important;
+    padding: 12px $stdMarginPadding15 !important;
     border-bottom: 1px solid grey !important;
 }
 
 .notification-spacer {
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: $stdMarginPadding15;
+    margin-left: $stdMarginPadding15;
 }
 
 input {
-	outline: none;
+    outline: none;
 }
-input[type=search] {
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	font-family: inherit;
-	font-size: 80%;
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 80%;
 }
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
-	display: none; 
+    display: none;
 }
 
+input[type="search"] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    height: 40%;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
 
-input[type=search] {
-	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-	border: solid 1px #ccc;
-	padding: 9px 10px 9px 32px;
-	width: 55px;
-	height: 40%;
-	-webkit-border-radius: 10em;
-	-moz-border-radius: 10em;
-	border-radius: 10em;
-	
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
-input[type=search]:focus {
-	width: 130px;
-	background-color: #fff;
-	border-color: #66CC75;
-	
-	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
+input[type="search"]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #66cc75;
 
+    -webkit-box-shadow: 0 0 $stdMArginPadding5 rgba(109, 207, 246, 0.5);
+    -moz-box-shadow: 0 0 $stdMArginPadding5 rgba(109, 207, 246, 0.5);
+    box-shadow: 0 0 $stdMArginPadding5 rgba(109, 207, 246, 0.5);
+}
 
 input:-moz-placeholder {
-	color: #999;
+    color: #999;
 }
 input::-webkit-input-placeholder {
-	color: #999;
+    color: #999;
 }

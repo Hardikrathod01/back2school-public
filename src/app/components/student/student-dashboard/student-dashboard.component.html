@@ -100,21 +100,17 @@
                 </mat-card-content>
             </mat-card>
         </div>
-        <div class="col-12 col-md-6 col-lg-6 col-sm-12">
+        <div class="col-12 col-md-12 col-lg-6 col-sm-12">
             <mat-card class="example-card">
                 <mat-card-header>
                     <mat-card-title>Attendance Report</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
                     <div class="chart-wrapper">
-
                         <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels"
                             [options]="pieChartOptions" [colors]="pieChartColors" [legend]="pieChartLegend"
                             [chartType]="pieChartType" [plugins]="lineChartPlugins">
                         </canvas>
-
-
-
                     </div>
                 </mat-card-content>
             </mat-card>
